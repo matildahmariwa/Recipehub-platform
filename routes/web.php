@@ -42,5 +42,3 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/phpfirebase_sdk','FirebaseController@index');
 
 Auth::routes();
-
-Route::get('/home', 'DashboardController@index')->name('home');

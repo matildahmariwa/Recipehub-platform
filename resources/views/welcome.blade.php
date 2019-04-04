@@ -30,9 +30,7 @@
                 height: 100vh;
             }
             .right-title{
-              
-                margin-left: -400%;
-                margin-top:0%;  
+
             }
             .right-title h1{
                 font-family: 'Great Vibes', cursive;
@@ -107,7 +105,86 @@
             font-weight: bold;
             color: white;
         }    
-      
+   
+        /* start the footer */
+
+        .footer {
+    background-color: #464646;
+    color: #fff;
+    font-size: 10px !important;
+    padding-bottom: 10px;
+}
+
+.footer * {
+    font-size: 15px;
+}
+
+.footer {}
+
+.footer a {
+    color: orange;
+}
+
+.footer>* {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    margin: 0 !important;
+}
+
+.top-right.links {
+    width: 100%;
+    max-width: 955px;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right-title {
+    float: left;
+}
+
+.top-right.links>a {
+    float: right;
+    color: #fff;
+}
+
+/* The footer */
+
+
+/*end  welcome buttons*/
+
+div#full-body>div:nth-child(2)>a:last-child>button:hover {
+    background-color: blue;
+}
+
+div#full-body>div:nth-child(2)>a>button {
+    transition: all 500ms ease-in-out 0ms;
+}
+
+div#full-body>div:nth-child(2)>a:first-child>button {
+color: #fff;
+border: 0px solid #ffff;
+padding: 20px 40px;
+box-shadow: 0px 0px 16px 1px #000;
+font-weight: 700 !important;
+letter-spacing: 1px;
+font-size: 20px;
+}
+
+div#full-body>div:nth-child(2)>a:last-child>button {
+background-color: #ffa504;
+color: #fff;
+border: 0px solid #ffff;
+padding: 20px 40px;
+box-shadow: 0px 0px 16px 1px #000;
+font-weight: 700 !important;
+letter-spacing: 1px;
+font-size: 20px;
+}
+
+/*end  welcome buttons*/
+
         </style>
     </head>
     <body>
@@ -115,7 +192,8 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/dashboard') }}">Home</a>
+                        <a href="{{ url('/dashboard') }}">MY DASHBOARD<img src="https://img.icons8.com/office/50/000000/filled-like.png"></a>
+                       
                     @else
                         <a class="btn" id="login" href="{{ route('login') }}">LOGIN</a>
 
@@ -128,21 +206,15 @@
                            </div>
                 </div>
                 <div>
-                  <a href="/recipehub/public/recipes"><button type="button" id="view-button"><h1>VIEW RECIPES</h1></button>
+                  <a href="/recipehub/public/recipes"><button type="button" id="view-button">VIEW RECIPES</button>
                    
-                <a href="/recipehub/public/create"><button type="button" id="post-button"><h1>POST RECIPE</h1></button></a>  
+                <a href="/recipehub/public/create"><button type="button" id="post-button">POST RECIPE</button></a>  
                   
                 
                    
                 </div>
             @endif
             
-
-           
-                    
-                
-
-         
         <div class="footer">
             <h5 class="text-center">Copyright @<?php echo date("Y");?> <a href="#">Matildah mariwa</a> All Rights Reserved</h5>
         </div>

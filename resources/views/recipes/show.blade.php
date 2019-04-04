@@ -8,30 +8,23 @@
         <br><br>
 <div class="row">
     <div class="col-md-6 col-sm-6">
-        <img  src="/recipehub/public/storage/cover_images/{{$recipe->cover_image}}">   
-    </div>
-    <div class="col-md-6 col-sm-6">
-            
-            <div>
-                <h1 style="border-bottom:dotted 1px;">Ingredients</h1>
-                    {{$recipe->ingredients}}
-                </div>
-    </div>
-
+        <img style="width:100%" src="/recipehub/public/storage/cover_images/{{$recipe->cover_image}}">   
 </div>
-
-
-<br><br>  
-
-<br><br>
-
-
+<div class="col-md-6 col-sm-6">
 <div>
-    <h1  style="border-bottom: dotted 1px;">Instructions</h1>
-    {{$recipe->instructions}}
+<h1 style="border-bottom:dotted 1px;">Ingredients</h1>
+{!!$recipe->ingredients!!}
+</div>     
+</div>
+</div>
+<br><br>  
+<br><br>
+<div>
+<h1  style="border-bottom: dotted 1px;">Instructions</h1>
+{!!$recipe->instructions!!}
 </div>
 <hr>
-<small>Published on {{$recipe->created_at}}  by {{$recipe->user->name}}</small>
+<small>Last updated on {{$recipe->created_at}}  by {{$recipe->user->name}}</small>
 <hr>
 </div>
 @if(!Auth::guest())

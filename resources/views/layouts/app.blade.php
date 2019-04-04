@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
- <script src="/recipehub/public/css/ckeditor/ckeditor.js"></script>
+ 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -12,7 +11,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <!--ckeditor -->
+    <script src="https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -21,6 +21,18 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>{{ config('app.name',) }}</title>
     <link rel="shortcut icon" href="css/favicon3.ico"/>
+    <style>
+
+        .ck.ck-editor__main>div {
+            height: 300px;
+        }
+
+
+        
+    
+    </style>
+
+
 </head>
 <body>
     <div id="app">
@@ -33,7 +45,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-colla pse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
@@ -80,9 +92,11 @@
             @yield('content')
         </main>
     </div>
-   
-    <script>
-        CKEDITOR.replace( 'article-ckeditor' );
-    </script>
+    
+<script>
+        CKEDITOR.replace('article-ckeditor');
+</script>
+
 </body>
+<script src="https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
 </html>

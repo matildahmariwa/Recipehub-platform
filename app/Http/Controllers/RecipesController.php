@@ -21,7 +21,7 @@ class RecipesController extends Controller
     public function index()
 
     {
-    $recipes=Recipe::orderBy('created_at','desc')->paginate(100);
+    $recipes=Recipe::orderBy('created_at','desc')->paginate(10);
     return view('recipes.index')->with('recipes',$recipes); 
     }
 
